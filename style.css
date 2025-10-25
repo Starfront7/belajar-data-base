@@ -1,0 +1,150 @@
+/* =============== GENERAL STYLE =============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://i.ytimg.com/vi/b7gc_4TrXkg/maxresdefault.jpg") no-repeat center center/cover;
+  overflow: hidden;
+  position: relative;
+}
+
+/* =============== BACKGROUND OVERLAY =============== */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+/* =============== CONTAINER CARD =============== */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 340px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Animasi masuk */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* =============== INPUT STYLE =============== */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.02);
+}
+
+/* =============== BUTTON STYLE =============== */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #5a7dfc, #869dff);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #869dff, #5a7dfc);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(90, 125, 252, 0.4);
+}
+
+/* =============== LINK STYLE =============== */
+p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #9db4ff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* =============== LOGOUT STYLE =============== */
+.logout {
+  display: inline-block;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8585);
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logout:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff8585, #ff6b6b);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 420px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
